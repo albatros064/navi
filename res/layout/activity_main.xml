@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent" >
     
-    <com.silentcrystal.cartographer.model.RenderSurface
+    <com.silentcrystal.cartographer.android.RenderSurface
       android:id="@+id/mainSurface"
       android:layout_width="match_parent"
       android:layout_height="match_parent"/>

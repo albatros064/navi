@@ -1,11 +1,11 @@
-package com.silentcrystal.cartographer;
+package com.silentcrystal.cartographer.android;
 
 import android.os.Bundle;
 import android.app.Activity;
 import android.view.Menu;
 
-import com.silentcrystal.cartographer.model.RenderSurface;
-import com.silentcrystal.cartographer.model.World;
+import com.silentcrystal.cartographer.R;
+import com.silentcrystal.cartographer.world.World;
 
 public class MainActivity extends Activity {
 	

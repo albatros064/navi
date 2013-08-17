@@ -1,4 +1,4 @@
-package com.silentcrystal.cartographer.model;
+package com.silentcrystal.cartographer.network;
 
 import android.os.Parcel;
 import android.os.Parcelable;

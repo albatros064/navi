@@ -1,6 +1,8 @@
-package com.silentcrystal.cartographer.model;
+package com.silentcrystal.cartographer.world;
 
-public class Grid {
+import android.graphics.Canvas;
+
+public class Grid implements WorldDrawable {
 	
 	protected int xScale;
 	protected int yScale;
@@ -23,4 +25,11 @@ public class Grid {
 	public int getYScale() {
 		return yScale;
 	}
+
+    public boolean draw(Canvas canvas, ViewPort viewPort) {
+        return true;
+    }
+    public boolean isVisible(ViewPort viewPort) {
+        return true;
+    }
 }

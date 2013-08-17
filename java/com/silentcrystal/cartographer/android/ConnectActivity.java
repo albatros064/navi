@@ -1,4 +1,4 @@
-package com.silentcrystal.cartographer;
+package com.silentcrystal.cartographer.android;
 
 import android.app.Activity;
 import android.os.Bundle;
@@ -12,7 +12,8 @@ import android.view.View.OnClickListener;
 
 import android.content.Intent;
 
-import com.silentcrystal.cartographer.model.ServerConnection;
+import com.silentcrystal.cartographer.R;
+import com.silentcrystal.cartographer.network.ServerConnection;
 
 public class ConnectActivity extends Activity {
 	public void onCreate(Bundle savedInstanceState) {
