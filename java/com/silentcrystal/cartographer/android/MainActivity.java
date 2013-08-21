@@ -5,6 +5,7 @@ import android.app.Activity;
 import android.view.Menu;
 
 import com.silentcrystal.cartographer.R;
+import com.silentcrystal.cartographer.world.ViewPort;
 import com.silentcrystal.cartographer.world.World;
 
 public class MainActivity extends Activity {
@@ -19,8 +20,11 @@ public class MainActivity extends Activity {
         
         renderSurface = (RenderSurface) findViewById(R.id.mainSurface);
         world = new World();
-        
+
+        ViewPort viewPort = new ViewPort();
+
         renderSurface.setWorld(world);
+        renderSurface.setViewPort(viewPort);
     }
 
     @Override

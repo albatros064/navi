@@ -1,5 +1,7 @@
 package com.silentcrystal.cartographer.geometry;
 
+import android.graphics.RectF;
+
 /**
  * Created by Nathaniel on 8/17/13.
  */
@@ -9,6 +11,19 @@ public class DoubleRect {
 
     public DoubleRect() {
         left = right = top = bottom = 0;
+    }
+
+    public DoubleRect(DoubleRect rect) {
+        left = rect.left;
+        right = rect.right;
+        top = rect.top;
+        bottom = rect.bottom;
+    }
+    public DoubleRect(RectF rect) {
+        left = rect.left;
+        right = rect.right;
+        top = rect.top;
+        bottom = rect.bottom;
     }
 
     public DoubleRect(double left, double top, double right, double bottom) {
@@ -46,11 +61,11 @@ public class DoubleRect {
         return bottom;
     }
 
-    public double width() {
+    public double getWidth() {
         return right - left;
     }
-    public double height() {
-        return top - bottom;
+    public double getHeight() {
+        return bottom - top;
     }
 
     public DoublePoint topLeft() {
@@ -88,5 +103,9 @@ public class DoubleRect {
         }
 
         return true;
+    }
+
+    public RectF toRectF() {
+        return new RectF((float) left, (float) top, (float) right, (float) bottom);
     }
 }

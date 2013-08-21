@@ -10,6 +10,10 @@ public class Circle extends DoublePoint {
         super(0, 0);
         radius = 0;
     }
+    public Circle(double x, double y, double radius) {
+        super(x, y);
+        this.radius = radius;
+    }
     public Circle(Circle template) {
         super(template.x, template.y);
         radius = template.radius;

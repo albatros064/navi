@@ -1,5 +1,7 @@
 package com.silentcrystal.cartographer.geometry;
 
+import android.graphics.PointF;
+
 /**
  * Created by Nathaniel on 8/17/13.
  */
@@ -8,6 +10,16 @@ public class DoublePoint {
 
     public DoublePoint() {
         x = y = 0;
+    }
+
+    public DoublePoint(DoublePoint point) {
+        x = point.x;
+        y = point.y;
+    }
+
+    public DoublePoint(PointF point) {
+        x = point.x;
+        y = point.y;
     }
 
     public DoublePoint(double x, double y) {
@@ -46,5 +58,18 @@ public class DoublePoint {
     }
     public boolean isBelowRightOf(DoublePoint point) {
         return x > point.x && y < point.y;
+    }
+
+    public double[] toDoubleArray() {
+        double[] doubles = { x, y };
+        return doubles;
+    }
+    public float[] toFloatArray() {
+        float[] floats = { (float) x, (float) y };
+        return floats;
+    }
+
+    public PointF toPointF() {
+        return new PointF((float) x, (float) y);
     }
 }
